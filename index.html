@@ -22,13 +22,18 @@ BONUS: utilizzare un data come nome del file immagine in un tag img -->
               align-items: center;
               height: 100vh;
               background-color: lightblue;
+              
+            }
+            .bgImageClass{
+              background-image: url(hollow.png)
             }
         </style>
     </head>
     <body>
-      <div id='app' class="container">
+      <div id='app' class="container " :class="bgImage" >
           <div class="row">
               <h1>{{ number }}</h1>
+
           </div>            
       </div>
     <script>
@@ -37,6 +42,7 @@ BONUS: utilizzare un data come nome del file immagine in un tag img -->
       el: '#app',
       data: {
           'number':1,
+          'bgImage':'bgImageClass',
       },
       methods: {
       }
